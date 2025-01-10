@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <p class="count">0</p>
+            <button class="btn btn-click">Click</button>
+            <button class="btn btn-reset">Reset</button>
+        </div>
+        <script>
+        let count=document.querySelector(".count");
+        let click=document.querySelector(".btn-click");
+        let reset=document.querySelector(".btn-reset");
+        function Click(){
+            let c=parseInt(count.innerText);
+            if (c<10)
+                count.innerText=c+1;
+            if (c==10)
+                click.classList.add("hide");
+        }
+        function Reset(){
+            count.innerText=0;
+            click.classList.remove("hide");
+        }
+
+        document.querySelector(".btn-click").addEventListener("click", Click);
+        document.querySelector(".btn-reset").addEventListener("click", Reset);
+
+    </script>
+    </body>
+</html>
