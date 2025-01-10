@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Counter Number</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -20,7 +20,7 @@
             let c=parseInt(count.innerText);
             if (c<10)
                 count.innerText=c+1;
-            if (c==10)
+            if (c+1==10)
                 click.classList.add("hide");
         }
         function Reset(){
